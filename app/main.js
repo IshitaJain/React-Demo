@@ -1,3 +1,8 @@
-/**
- * @author  jaini on 16-02-11
- */
+import React from 'react';
+import Hello from './component.jsx';
+
+main();
+
+function main() {
+    React.render(<Hello/>, document.getElementById('app'));
+}

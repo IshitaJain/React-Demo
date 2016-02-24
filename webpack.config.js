@@ -30,7 +30,18 @@ module.exports = {
                 query: {
                     presets: ['es2015','react']
                 }
-            }
+            },
+            {
+                test: /(\.scss|\.css)$/,
+                loaders: [
+                require.resolve('style-loader'),
+                require.resolve('css-loader') + '?sourceMap',
+                require.resolve('sass-loader') + '?sourceMap'
+                ]
+             }
         ]
+    },
+    resolve: {
+        extensions: ['', '.jsx', '.scss', '.js', '.json']
     }
 };
